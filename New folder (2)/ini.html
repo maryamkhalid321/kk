@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>a static method is created with the 'static' keyword, and you can only call the method on the class itself</p>
+<p id="h"></p>
+<p id="hi"></p>
+<p id="welcome"></p>
+<script>
+class student {
+    constructor(name) {
+        this.studentname = name;
+    }
+    static h() {
+        return " hello!" ;
+    }
+    static welcome(x) {
+        return 'welcome ' + x.studentname;
+    }
+    hi() {
+        return "hi" + this.studentname;
+    }
+}
+myname = new student (" carol");
+document.getElementById('h').innerHTML = student.h();
+document.getElementById("hi").innerHTML = myname.hi();
+document.getElementById("welcome").innerHTML = student.welcome(myname)
+</script>
+</body>
+</html>

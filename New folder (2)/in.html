@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>js class inheritance</h2>
+  <p>use the "extends" keybord to inherit all methods from another class</p> 
+  <p>use the "super" method to call the parents's constructor function.</p>
+  <p id="details"></p>
+  <script>
+    class Car {
+        constructor(brand){
+    this.carname = brand;
+        }
+    
+    present() {
+        return 'i have a' + this.carname;
+    }
+}
+class Model extends Car {
+    constructor(brand,mod) {
+        super(brand);
+        this.model = mod;
+    }
+    show() {
+        return this.present() + ', it is a ' + this.model ;
+    }
+}
+let myCar = new Model("ford", "mustang");
+document.getElementById("details").innerHTML = myCar.show();
+  </script> 
+</body>
+</html>
